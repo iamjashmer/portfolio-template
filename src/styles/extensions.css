@@ -5199,7 +5199,7 @@ img.about__stat-badge {
   font-family: var(--font-display);
   font-size: clamp(36px, 4.5vw, 48px);
   font-weight: 700;
-  color: var(--navy-ink);
+  color: var(--navy);
   margin: 0 0 8px;
   letter-spacing: -0.025em;
   line-height: 1.05;
@@ -5222,7 +5222,7 @@ img.about__stat-badge {
   font-family: var(--font-display);
   font-size: clamp(20px, 2.2vw, 24px);
   font-weight: 700;
-  color: var(--navy-ink);
+  color: var(--navy);
   letter-spacing: -0.015em;
   margin: 36px 0 12px;
   padding-top: 24px;
@@ -5245,7 +5245,7 @@ img.about__stat-badge {
 }
 .legal-page__body p {
   font-size: 15px;
-  color: rgba(11, 30, 63, 0.78);
+  color: color-mix(in srgb, var(--navy) 78%, transparent);
   line-height: 1.65;
   margin: 0 0 14px;
 }
@@ -5255,7 +5255,7 @@ img.about__stat-badge {
 .legal-page__body ul {
   margin: 0 0 16px;
   padding: 0 0 0 22px;
-  color: rgba(11, 30, 63, 0.78);
+  color: color-mix(in srgb, var(--navy) 78%, transparent);
 }
 .legal-page__body ul li {
   font-size: 15px;
@@ -5266,7 +5266,7 @@ img.about__stat-badge {
   color: var(--orange);
 }
 .legal-page__body strong {
-  color: var(--navy-ink);
+  color: var(--navy);
   font-weight: 700;
 }
 .legal-page__body code {
@@ -5276,7 +5276,7 @@ img.about__stat-badge {
   background: rgba(255, 122, 26, 0.08);
   border: 1px solid rgba(255, 122, 26, 0.2);
   border-radius: 5px;
-  color: var(--navy-ink);
+  color: var(--navy);
 }
 .legal-page__body a {
   color: var(--orange-ink);
