@@ -1,0 +1,342 @@
+{
+  "project": "Teacher Content Engine",
+  "how_to_use": "This file is the storyboard for ONE video. Read 'video', 'presenter', 'voice', 'layouts', 'global_rules' and 'demo_prop' first, then build the video scene by scene from 'scenes'. Each scene's 'voiceover' is the exact text (with ElevenLabs v3 tags) that is spoken during that scene. All start/end/duration values are ESTIMATES. After the voiceover audio is generated, replace them with the real audio durations and keep every scene synced to its own line. Do not add, remove, or reword spoken lines.",
+  "video": {
+    "id": "ai-in-teaching-demo-01",
+    "title": "Beyond PPT: AI for Teaching (area of a circle demo)",
+    "topic": "Using AI in teaching",
+    "pillar": "Teaching tips and classroom strategies",
+    "language": "Taglish",
+    "platforms": [
+      "TikTok",
+      "Facebook"
+    ],
+    "aspect_ratios": [
+      "9:16",
+      "16:9"
+    ],
+    "target_duration_seconds": 116,
+    "max_duration_seconds": 120,
+    "duration_rule": "If the generated audio runs longer than 2:00, cut the last sentence of S09 ('Gumagana ito sa kahit anong triangle.') and the matching on-screen replay. If it is still over 2:00, flag it to AJ instead of trimming other lines."
+  },
+  "presenter": {
+    "type": "cartoon avatar, talking-head explainer",
+    "name_on_screen": "AJ",
+    "lower_third_text": "AJ | Teacher in Alaska",
+    "appearance": "TO BE PROVIDED BY AJ (colors, outfit, style). Keep the avatar identical in every scene.",
+    "expressions_used": [
+      "curious",
+      "warm",
+      "excited",
+      "calm"
+    ]
+  },
+  "voice": {
+    "provider": "ElevenLabs",
+    "model": "eleven_v3",
+    "tags_used": [
+      "[curious]",
+      "[warm]",
+      "[excited]",
+      "[pause]"
+    ],
+    "notes": "Use the Creative or Natural stability setting for the most expressive tag response. Spelled-out words in the voiceover (P-P-T, H-T-M-L, pi r squared) are intentional for pronunciation; the on-screen text uses normal spelling."
+  },
+  "layouts": {
+    "avatar_full": {
+      "9:16": "Avatar centered, waist-up, filling most of the frame. Keep text out of the top 10% and bottom 20% of the frame.",
+      "16:9": "Avatar on the right half, on-screen text on the left half."
+    },
+    "screen_with_avatar_pip": {
+      "9:16": "Screen recording fills the top ~65% of the frame. Avatar sits in the bottom ~35%. Keep captions out of the bottom 20%.",
+      "16:9": "Screen recording fills the frame. Avatar in a picture-in-picture box in the bottom-right corner, about 25% of the frame width."
+    }
+  },
+  "global_rules": [
+    "No real faces anywhere. The only person shown is the cartoon avatar.",
+    "No real names, student names, staff names, or family details in any visual or on-screen text.",
+    "No identifying details of any school or community: no logos, signs, photos, student work, or rosters.",
+    "Screen recordings must show a clean, anonymous screen: no account names, profile pictures, browser tabs, bookmarks, or notifications.",
+    "No sensitive or inappropriate content.",
+    "Nothing business-related: no web design promotion, no selling.",
+    "Do not add claims, statistics, or facts that are not in this file."
+  ],
+  "demo_prop": {
+    "description": "A single self-contained HTML page with three views, screen-recorded for scenes S05 to S09. It is a prop and must exist before the video is generated. Neutral light background, large high-contrast text readable on a phone, no logos or branding.",
+    "view_1_circle_area": {
+      "used_in": [
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "behavior": [
+        "Start with a circle labeled with radius r.",
+        "On play, the circle is cut into equal sector slices.",
+        "The slices separate and rearrange, alternating point-up and point-down, into a shape that looks like a parallelogram.",
+        "A slider labeled 'Slices' (even numbers, from 4 to 64) re-runs the animation with that many slices. As the slice count increases, the shape visibly approaches a rectangle.",
+        "A final labeled state shows: base is half the circumference (pi r), height is r, area is pi r squared."
+      ]
+    },
+    "view_2_radius_doubling": {
+      "used_in": [
+        "S08"
+      ],
+      "behavior": [
+        "Show a circle with a slider labeled 'Radius'.",
+        "Display the area as a multiple of the starting circle's area (for example 'Area: x1').",
+        "When the radius slider is moved to double the radius, the circle grows and the display reads 'Area: x4'."
+      ]
+    },
+    "view_3_triangle_area": {
+      "used_in": [
+        "S09"
+      ],
+      "behavior": [
+        "Show a triangle with base b and height h labeled, with the height drawn as a visible line.",
+        "On play, an identical copy appears next to it, rotates 180 degrees, and attaches along one side to form a parallelogram.",
+        "The parallelogram keeps base b and height h labeled.",
+        "A final label reads: area of a triangle = 1/2 x base x height.",
+        "A 'New triangle' button swaps in a differently shaped triangle (for example a right or obtuse one) and replays the same move, to show it works for any triangle."
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "Hook",
+      "start": "0:00",
+      "end": "0:05",
+      "duration_seconds": 5,
+      "optional": false,
+      "voiceover": "[curious] If you are still using P-P-T in class... [pause] you are missing something.",
+      "layout": "avatar_full",
+      "avatar_expression": "curious, one eyebrow raised",
+      "visual": "Avatar close-up. Behind the avatar, a plain slide with bullet points fades out.",
+      "screen_capture": "None.",
+      "on_screen_text": "Still using PPT?",
+      "transition_out": "Quick cut",
+      "notes": "Hook must land in the first 2 seconds. Text appears immediately."
+    },
+    {
+      "id": "S02",
+      "name": "Intro",
+      "start": "0:05",
+      "end": "0:09",
+      "duration_seconds": 4,
+      "optional": false,
+      "voiceover": "[warm] Hi, this is AJ, teacher dito sa Alaska!",
+      "layout": "avatar_full",
+      "avatar_expression": "warm smile, waving",
+      "visual": "Avatar waves at the camera.",
+      "screen_capture": "None.",
+      "on_screen_text": "AJ | Teacher in Alaska",
+      "transition_out": "Cut",
+      "notes": "Show the lower-third for the full scene. This is the standard channel intro."
+    },
+    {
+      "id": "S03",
+      "name": "The problem",
+      "start": "0:09",
+      "end": "0:19",
+      "duration_seconds": 10,
+      "optional": false,
+      "voiceover": "[warm] Hindi ko sinasabing itapon na ang PowerPoint. [pause] Pero may mga idea sa math na mahirap makita sa isang static na slide.",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "warm, thoughtful",
+      "visual": "A static diagram of a circle with the label 'Area = ?' appears on the screen area. The avatar reacts in the PiP.",
+      "screen_capture": "None. Use a simple graphic of a circle.",
+      "on_screen_text": "Abstract na idea sa math",
+      "transition_out": "Dissolve",
+      "notes": "Keep the tone friendly. Do not criticize PowerPoint."
+    },
+    {
+      "id": "S04",
+      "name": "The prompt",
+      "start": "0:19",
+      "end": "0:33",
+      "duration_seconds": 14,
+      "optional": false,
+      "voiceover": "[curious] Ito ang ginawa ko. Sinabi ko sa AI: \"Gumawa ng H-T-M-L animation na nagpapakita kung paano nakukuha ang area ng circle. Lagyan ng slider para sa dami ng slices.\" [pause] At ito ang lumabas.",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "curious, leaning in",
+      "visual": "Screen recording of a plain chat box. The prompt types out in sync with the voiceover. At the end of the line, the result page loads.",
+      "screen_capture": "A clean, anonymous chat window: no account name, profile picture, tabs, or notifications. Type the exact prompt text shown in on_screen_text.",
+      "on_screen_text": "Gumawa ng HTML animation na nagpapakita kung paano nakukuha ang area ng circle. Lagyan ng slider para sa dami ng slices.",
+      "transition_out": "Cut to the demo page loading",
+      "notes": "Show the prompt text large enough for viewers to copy it."
+    },
+    {
+      "id": "S05",
+      "name": "Demo: slices",
+      "start": "0:33",
+      "end": "0:41",
+      "duration_seconds": 8,
+      "optional": false,
+      "voiceover": "[excited] Tingnan natin! Hinihiwa ang circle sa maliliit na slices... [pause] tapos pinagsasama-sama, at nagiging parallelogram!",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "excited, pointing at the screen",
+      "visual": "Screen recording of demo_prop view_1_circle_area: the circle is cut into slices, then the slices rearrange into a parallelogram.",
+      "screen_capture": "demo_prop view_1_circle_area. Time the slicing to the first sentence and the rearranging to the sentence after the pause.",
+      "on_screen_text": "Circle -> Slices -> Parallelogram",
+      "transition_out": "Cut",
+      "notes": "This is the hero moment. Keep the animation smooth and clear."
+    },
+    {
+      "id": "S06",
+      "name": "Demo: slider",
+      "start": "0:41",
+      "end": "0:49",
+      "duration_seconds": 8,
+      "optional": false,
+      "voiceover": "[excited] Ngayon, itaas natin ang slider. Habang dumarami ang slices, mas nagiging kamukha ito ng rectangle.",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "excited",
+      "visual": "Screen recording: the Slices slider is dragged upward and the shape visibly approaches a rectangle.",
+      "screen_capture": "demo_prop view_1_circle_area with the Slices slider moving from a low value to a high value.",
+      "on_screen_text": "Mas maraming slices = mas kamukha ng rectangle",
+      "transition_out": "Cut",
+      "notes": "Show the slider value changing on screen."
+    },
+    {
+      "id": "S07",
+      "name": "Demo: the formula",
+      "start": "0:49",
+      "end": "1:03",
+      "duration_seconds": 14,
+      "optional": false,
+      "voiceover": "[warm] Ang base ay kalahati ng circumference. Ang taas ay ang radius. Kaya ang area ay pi r squared. [pause] Hindi na lang formula na kailangang i-memorize. Nakita na nila kung bakit.",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "warm, satisfied",
+      "visual": "The animation freezes on the rearranged shape. Labels appear one at a time in sync with the voiceover: base, height, area.",
+      "screen_capture": "demo_prop view_1_circle_area, final labeled state.",
+      "on_screen_text": "Base = 1/2 circumference | Height = radius | Area = pi x r x r",
+      "transition_out": "Dissolve",
+      "notes": "Reveal each label as it is spoken. Keep the final formula on screen through the pause."
+    },
+    {
+      "id": "S08",
+      "name": "Demo: doubling the radius",
+      "start": "1:03",
+      "end": "1:15",
+      "duration_seconds": 12,
+      "optional": false,
+      "voiceover": "[curious] Tanong sa klase: kapag dinoble natin ang radius, dalawang beses lang ba ang area? [pause] [excited] Apat na beses! Kasi naka-square ang radius.",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "curious, then excited at the answer",
+      "visual": "Screen recording of demo_prop view_2_radius_doubling. A question mark appears over the area display during the pause, then the radius doubles and the display reads x4.",
+      "screen_capture": "demo_prop view_2_radius_doubling.",
+      "on_screen_text": "Dinoble ang radius = ilang beses ang area?",
+      "transition_out": "Cut",
+      "notes": "Hold on the 'Area: x4' result for about 2 seconds."
+    },
+    {
+      "id": "S09",
+      "name": "Demo: triangle",
+      "start": "1:15",
+      "end": "1:33",
+      "duration_seconds": 18,
+      "optional": false,
+      "voiceover": "[curious] Isa pa! Kunin natin ang isang triangle. [pause] Kopyahin, i-rotate ng one hundred eighty degrees, at idikit sa gilid. [excited] Parallelogram! [warm] Dalawang triangle ang bumubuo nito, kaya ang area ng triangle ay kalahati ng base times height. Gumagana ito sa kahit anong triangle.",
+      "layout": "screen_with_avatar_pip",
+      "avatar_expression": "curious, then excited at 'Parallelogram!', then warm",
+      "visual": "Screen recording of demo_prop view_3_triangle_area: a triangle with base b and height h labeled. A copy appears, rotates 180 degrees, and attaches along a side to form a parallelogram. The formula appears. During the last sentence, a differently shaped triangle replays the same move to show it works for any triangle.",
+      "screen_capture": "demo_prop view_3_triangle_area, including the 'New triangle' button used once during the last sentence.",
+      "on_screen_text": "2 triangles = 1 parallelogram | Triangle area = 1/2 x base x height",
+      "transition_out": "Cut",
+      "notes": "Reveal the parallelogram on the word 'Parallelogram!'. Show the second, differently shaped triangle during the last sentence."
+    },
+    {
+      "id": "S10",
+      "name": "The teacher's role",
+      "start": "1:33",
+      "end": "1:43",
+      "duration_seconds": 10,
+      "optional": false,
+      "voiceover": "[warm] Pero ako pa rin ang nag-check kung tama ang math. [pause] Ako ang nagtatanong sa klase, \"Ano sa tingin ninyo ang susunod na mangyayari?\"",
+      "layout": "avatar_full",
+      "avatar_expression": "warm, confident",
+      "visual": "Avatar returns to full frame. A checkmark animates in, followed by a speech-bubble graphic with the class question.",
+      "screen_capture": "None.",
+      "on_screen_text": "Teacher pa rin ang nag-check | \"Ano sa tingin ninyo ang susunod na mangyayari?\"",
+      "transition_out": "Slow dissolve",
+      "notes": "No images of students or a classroom. Use only the avatar and graphics."
+    },
+    {
+      "id": "S11",
+      "name": "Resolution",
+      "start": "1:43",
+      "end": "1:50",
+      "duration_seconds": 7,
+      "optional": false,
+      "voiceover": "[warm] AI will not replace teachers. [pause] In fact, teachers are needed more than ever.",
+      "layout": "avatar_full",
+      "avatar_expression": "calm, sincere",
+      "visual": "Avatar centered on a calm, simple background. Text fades in slowly, one sentence at a time.",
+      "screen_capture": "None.",
+      "on_screen_text": "AI will not replace teachers. Teachers are needed more than ever.",
+      "transition_out": "Dissolve",
+      "notes": "Keep this scene simple and unhurried. No music swell."
+    },
+    {
+      "id": "S12",
+      "name": "Outro",
+      "start": "1:50",
+      "end": "1:56",
+      "duration_seconds": 6,
+      "optional": false,
+      "voiceover": "[warm] Once again, this is AJ, a teacher here in Alaska. [pause] [excited] Follow for more!",
+      "layout": "avatar_full",
+      "avatar_expression": "warm, then excited",
+      "visual": "Avatar waves. The lower-third appears first, then a follow button animates in.",
+      "screen_capture": "None.",
+      "on_screen_text": "AJ | Teacher in Alaska, then FOLLOW FOR MORE!",
+      "transition_out": "End",
+      "notes": "Standard channel outro. 'Follow for more!' is the last spoken line and the last on-screen text."
+    }
+  ],
+  "captions": {
+    "tiktok": "Kung PPT pa rin ang gamit mo, subukan mo 'to. AI + HTML = math na nakikita, hindi lang memorize. #TeacherTips #AIinEducation #TeacherPH #MathTeacher #GuroSaAmerika",
+    "facebook": "Hindi mapapalitan ng AI ang guro. Pero puwede nitong gawing mas malinaw ang mga abstract na aralin, tulad ng kung bakit ang area ng circle ay pi r squared. Panoorin ang demo, at i-share sa kapwa teacher. #TeacherPH #AIinEducation #TeachingAbroad"
+  },
+  "fact_check": [
+    {
+      "claim": "Cutting a circle into slices and rearranging them gives a near-parallelogram with base about half the circumference (pi r) and height about r, so area is pi r squared.",
+      "status": "verified",
+      "basis": "Standard geometry, checked by working it out."
+    },
+    {
+      "claim": "Doubling the radius makes the area four times as large.",
+      "status": "verified",
+      "basis": "Area is proportional to the square of the radius."
+    },
+    {
+      "claim": "Two identical triangles form a parallelogram, so a triangle's area is half of base times height.",
+      "status": "verified",
+      "basis": "Standard geometry."
+    },
+    {
+      "claim": "The area of a parallelogram is base times height.",
+      "status": "verified",
+      "basis": "Standard geometry."
+    },
+    {
+      "claim": "Rotating a copy of any triangle 180 degrees about the midpoint of one side and attaching it forms a parallelogram, so the area rule works for any triangle.",
+      "status": "verified",
+      "basis": "The diagonals of the resulting four-sided shape bisect each other, which defines a parallelogram. Checked by working it out."
+    },
+    {
+      "claim": "AI will not replace teachers. Teachers are needed more than ever.",
+      "status": "opinion",
+      "basis": "This is AJ's stance, not a statistic. UNESCO's 2023 guidance on generative AI in education takes a human-centred approach and recommends protecting human agency, which supports the spirit of the line. The sources found do not state it in these words, so do not attribute it to UNESCO."
+    },
+    {
+      "claim": "The teacher checks the AI output before using it.",
+      "status": "editorial",
+      "basis": "Good practice. UNESCO's guidance also stresses validating AI systems for ethical and pedagogical appropriateness."
+    }
+  ],
+  "sources": [
+    "https://inee.org/es/node/13023",
+    "https://gcedclearinghouse.org/en/node/129359"
+  ]
+}

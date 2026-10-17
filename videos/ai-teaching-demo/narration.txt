@@ -1,0 +1,12 @@
+If you are still using PPT in class... you are missing something.
+Hi, this is AJ, teacher dito sa Alaska!
+Hindi ko sinasabing itapon na ang PowerPoint. Pero may mga idea sa math na mahirap makita sa isang static na slide.
+Ito ang ginawa ko. Sinabi ko sa AI: "Gumawa ng HTML animation na nagpapakita kung paano nakukuha ang area ng circle. Lagyan ng slider para sa dami ng slices." At ito ang lumabas.
+Tingnan natin! Hinihiwa ang circle sa maliliit na slices... tapos pinagsasama-sama, at nagiging parallelogram!
+Ngayon, itaas natin ang slider. Habang dumarami ang slices, mas nagiging kamukha ito ng rectangle.
+Ang base ay kalahati ng circumference. Ang taas ay ang radius. Kaya ang area ay pi r squared. Hindi na lang formula na kailangang i-memorize. Nakita na nila kung bakit.
+Tanong sa klase: kapag dinoble natin ang radius, dalawang beses lang ba ang area? Apat na beses! Kasi naka-square ang radius.
+Isa pa! Kunin natin ang isang triangle. Kopyahin, i-rotate ng 180 degrees, at idikit sa gilid. Parallelogram! Dalawang triangle ang bumubuo nito, kaya ang area ng triangle ay kalahati ng base times height. Gumagana ito sa kahit anong triangle.
+Pero ako pa rin ang nag-check kung tama ang math. Ako ang nagtatanong sa klase, "Ano sa tingin ninyo ang susunod na mangyayari?"
+AI will not replace teachers. In fact, teachers are needed more than ever.
+Once again, this is AJ, a teacher here in Alaska. Follow for more!

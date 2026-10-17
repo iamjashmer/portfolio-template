@@ -46,13 +46,13 @@ export type Profile = {
 }
 
 export const profile: Profile = {
-  name: 'Your Name',
-  firstName: 'Your Name',
-  handle: '@yourhandle',
-  role: 'PLACEHOLDER - your title',
+  name: 'April Jashmer Anting',
+  firstName: 'April',
+  handle: '@iamjashmer',
+  role: 'Teacher',
   avatarSrc: '/avatar.svg',
   verifiedLabel: 'PLACEHOLDER - what the tick means (e.g. a certification)',
-  email: 'you@example.com',
+  email: 'iamjashmer@gmail.com',
   location: 'PLACEHOLDER - your city or timezone',
   // Pick any icon from https://phosphoricons.com and import it above.
   stats: [
@@ -62,11 +62,11 @@ export const profile: Profile = {
   ],
   // The intro types this line, then flies it into the Home headline.
   // Keep it short: two halves, 5-8 words total.
-  displayName: { line1: 'Your headline here.', line2: 'Keep it short.' },
+  displayName: { line1: 'Teaching that makes', line2: 'learning stick.' },
   hero: {
-    body: 'PLACEHOLDER - one line on what you do and who you do it for.',
+    body: 'I teach and design engaging lessons that help every student grow with confidence.',
     portraitSrc: '/avatar.svg',
-    portraitAlt: 'Portrait placeholder',
+    portraitAlt: 'Portrait of April Jashmer Anting',
   },
   socials: [
     { label: 'Facebook profile', href: '#', iconPath: '/icons/facebook.svg' },

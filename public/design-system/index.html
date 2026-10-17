@@ -1,0 +1,222 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design System Samples</title>
+<style>
+:root {
+  /* Brand palette */
+  --navy:       #0B1E3F;   /* primary text, card surface, dark accents */
+  --navy-ink:   #060C1A;   /* matches shader dark base for .dark-section */
+  --cream:      #F4F4ED;   /* matches shader light base, page bg */
+  --white:      #FFFFFF;
+  --orange:     #FF7A1A;   /* CTA, accent bar, active dot */
+  --orange-hover: #FFA155; /* CTA hover state */
+  --orange-ink: #B4490A;   /* accessible orange TEXT on light bg - 4.88:1 on cream, 5.39:1 on white (WCAG AA) */
+  --muted:      #5A6479;
+  --divider:    rgba(11, 30, 63, 0.12);
+  --success:    #2E9E6B;   /* form status ok - clears 4.5:1 on navy-ink */
+  --error:      #D9544F;   /* form status error - clears 4.5:1 on navy-ink */
+
+  /* Brands section - neutral logo plate so client marks read as framed logos,
+     not site UI (esp. an orange logo vs the --orange accent) */
+  --brands-chip-bg:     #FBFBF7;                  /* cool near-white, lifts off cream */
+  --brands-chip-border: rgba(11, 30, 63, 0.10);   /* hairline frame on the logo medallion */
+
+  /* Type */
+  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+  --fs-display: clamp(64px, 9vw, 128px);
+  --fs-h2: clamp(32px, 4vw, 56px);
+  --fs-h3: clamp(22px, 2vw, 28px);
+  --fs-body: 15px;
+  --fs-eyebrow: 12px;
+  --fs-nav: 15px;
+  --lh-tight: 0.95;
+  --lh-heading: 1.25;
+  --lh-body: 1.65;
+  --ls-display: -0.03em;
+  --ls-eyebrow: 0.18em;
+
+  /* Layout */
+  --container-x: clamp(24px, 6vw, 96px);
+  --section-pad-y: clamp(110px, 13vh, 170px);
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* Shadows */
+  --shadow-soft: 0 20px 60px -20px rgba(11, 30, 63, 0.25);
+  --shadow-card: 0 40px 120px -30px rgba(6, 12, 26, 0.35);
+  --shadow-btn: 0 8px 24px -8px rgba(11, 30, 63, 0.25);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+  --dur-slow: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+[data-theme='dark'] {
+  --cream:        #070B14;
+  --paper:        #0B1120;
+  --white:        #0E1626;
+  --navy:         #EDF0F6;
+  --navy-ink:     #04070F;
+  --muted:        rgba(237, 240, 246, 0.60);
+  --divider:      rgba(255, 255, 255, 0.10);
+  --line:         rgba(255, 255, 255, 0.09);
+  --line-strong:  rgba(255, 255, 255, 0.20);
+  --tint:         rgba(255, 255, 255, 0.05);
+  --tint-strong:  rgba(255, 255, 255, 0.09);
+  --glass:        rgba(14, 22, 38, 0.72);
+  --orange-ink:   #FF9A4D;
+  --panel-dark:   #0B1120;
+  --brands-chip-bg:     #F4F4ED;
+  --brands-chip-border: rgba(255, 255, 255, 0.14);
+  --shadow-soft:  0 20px 60px -20px rgba(0, 0, 0, 0.75);
+  --shadow-card:  0 40px 120px -30px rgba(0, 0, 0, 0.85);
+  --shadow-btn:   0 8px 24px -8px rgba(0, 0, 0, 0.7);
+}
+:root{--paper:#FBFBF7;--line:rgba(11,30,63,.14);--tint:rgba(11,30,63,.05)}
+[data-theme='dark']{--paper:#0B1120;--line:rgba(255,255,255,.09);--tint:rgba(255,255,255,.05)}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-display);background:var(--cream);color:var(--navy);font-size:var(--fs-body);line-height:var(--lh-body)}
+main{max-width:1100px;margin:0 auto;padding:32px 20px 96px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-size:var(--fs-h2);line-height:var(--lh-heading);letter-spacing:var(--ls-display);margin:0}
+h2{font-size:var(--fs-h3);margin:56px 0 4px}
+.eyebrow{font-size:var(--fs-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--orange-ink);font-weight:600}
+p.sub{color:var(--muted);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.sw,.cell{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.chip{height:56px;border-radius:10px;border:1px solid var(--line)}
+code{font-size:12px;color:var(--muted);word-break:break-all}code.d{color:var(--orange-ink)}
+small{font-size:11px;color:var(--muted)}
+.btn{font:inherit;font-weight:600;background:var(--orange);color:#fff;border:0;border-radius:var(--radius-pill);padding:10px 20px;cursor:pointer;box-shadow:var(--shadow-btn);transition:background var(--dur-fast) var(--ease-out),transform var(--dur-fast) var(--ease-spring)}
+.btn:hover{background:var(--orange-hover);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--navy);border:1px solid var(--line)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-card);padding:20px;box-shadow:var(--shadow-soft)}
+.type div{border-bottom:1px solid var(--line);padding:8px 0}
+.lnk{display:inline-block;margin:4px 6px 4px 0;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--navy);text-decoration:none;font-size:13px;background:var(--paper)}
+.lnk:hover{border-color:var(--orange)}
+.stage{height:96px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:var(--tint);margin-bottom:8px}
+.replay{font:inherit;font-size:12px;background:none;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--navy);cursor:pointer;align-self:flex-start}
+.track{display:flex;gap:28px;white-space:nowrap;font-weight:600;width:max-content}
+.badge{width:44px;height:44px;border-radius:12px;background:var(--orange)}
+.dot{width:32px;height:32px;border-radius:50%;background:var(--orange)}
+.word{font-size:24px;font-weight:600}
+.bar{height:16px;width:80%;border-radius:8px}
+.shim{background:linear-gradient(90deg,rgba(128,128,128,.18) 25%,rgba(128,128,128,.45) 50%,rgba(128,128,128,.18) 75%);background-size:200% 100%;animation:shimmer 1.6s linear infinite}
+.drift{height:60px;overflow:hidden}.drift i{display:block;height:28px;margin-bottom:6px;border-radius:8px;background:var(--orange)}
+.ease{height:12px;border-radius:6px;background:var(--tint);position:relative;margin:10px 0}.ease b{position:absolute;top:-4px;left:0;width:20px;height:20px;border-radius:50%;background:var(--orange)}
+.shadows .cell{height:90px;background:var(--white)}
+.pulse{position:relative}.pulse::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--orange);animation:pulse 1.6s ease-out infinite}.flash{animation:flash 1.2s ease-out infinite}.draw{animation:draw 900ms var(--ease-out) infinite alternate}
+@keyframes marquee{to{transform:translate(-50%)}}
+@keyframes float{50%{transform:translateY(-10px) rotate(-8deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+@keyframes pop{from{opacity:0;transform:scale(.4)}}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
+@keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+@keyframes pulse{0%{transform:scale(.85);opacity:.55}70%,100%{transform:scale(1.5);opacity:0}}
+@keyframes word{from{opacity:0;transform:translateY(12px);letter-spacing:.12em}to{opacity:1;letter-spacing:.04em}}
+@keyframes flash{0%{opacity:0;transform:scale(.2)}35%{opacity:1;transform:scale(1.6)}100%{opacity:0;transform:scale(.3)}}
+@keyframes draw{from{stroke-dashoffset:70}to{stroke-dashoffset:0}}
+@keyframes drift{to{transform:translateY(-34px)}}
+@keyframes slide{0%,100%{left:0}50%{left:calc(100% - 20px)}}
+</style></head><body><main>
+<header class="top"><div><div class="eyebrow">Design system</div><h1>Samples &amp; animations</h1></div>
+<div><button class="btn" onclick="toggleTheme()">Light / dark</button> <button class="btn ghost" onclick="replayAll()">Replay all</button></div></header>
+<p class="sub">Generated from <code>src/styles/tokens.css</code>. Edit tokens, rerun <code>node scripts/make-design-system.mjs</code>.</p>
+
+<h2>Colors</h2><p class="sub">Light value shown; dark override in orange.</p>
+<div class="grid"><div class="sw"><div class="chip" style="background:var(--navy)"></div>
+  <b>--navy</b><code>#0B1E3F</code><code class="d">dark #EDF0F6</code>
+  <small>primary text, card surface, dark accents</small></div><div class="sw"><div class="chip" style="background:var(--navy-ink)"></div>
+  <b>--navy-ink</b><code>#060C1A</code><code class="d">dark #04070F</code>
+  <small>matches shader dark base for .dark-section</small></div><div class="sw"><div class="chip" style="background:var(--cream)"></div>
+  <b>--cream</b><code>#F4F4ED</code><code class="d">dark #070B14</code>
+  <small>matches shader light base, page bg</small></div><div class="sw"><div class="chip" style="background:var(--white)"></div>
+  <b>--white</b><code>#FFFFFF</code><code class="d">dark #0E1626</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--orange)"></div>
+  <b>--orange</b><code>#FF7A1A</code>
+  <small>CTA, accent bar, active dot</small></div><div class="sw"><div class="chip" style="background:var(--orange-hover)"></div>
+  <b>--orange-hover</b><code>#FFA155</code>
+  <small>CTA hover state</small></div><div class="sw"><div class="chip" style="background:var(--orange-ink)"></div>
+  <b>--orange-ink</b><code>#B4490A</code><code class="d">dark #FF9A4D</code>
+  <small>accessible orange TEXT on light bg - 4.88:1 on cream, 5.39:1 on white (WCAG AA)</small></div><div class="sw"><div class="chip" style="background:var(--muted)"></div>
+  <b>--muted</b><code>#5A6479</code><code class="d">dark rgba(237, 240, 246, 0.60)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--divider)"></div>
+  <b>--divider</b><code>rgba(11, 30, 63, 0.12)</code><code class="d">dark rgba(255, 255, 255, 0.10)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--success)"></div>
+  <b>--success</b><code>#2E9E6B</code>
+  <small>form status ok - clears 4.5:1 on navy-ink</small></div><div class="sw"><div class="chip" style="background:var(--error)"></div>
+  <b>--error</b><code>#D9544F</code>
+  <small>form status error - clears 4.5:1 on navy-ink</small></div><div class="sw"><div class="chip" style="background:var(--brands-chip-bg)"></div>
+  <b>--brands-chip-bg</b><code>#FBFBF7</code><code class="d">dark #F4F4ED</code>
+  <small>cool near-white, lifts off cream</small></div><div class="sw"><div class="chip" style="background:var(--brands-chip-border)"></div>
+  <b>--brands-chip-border</b><code>rgba(11, 30, 63, 0.10)</code><code class="d">dark rgba(255, 255, 255, 0.14)</code>
+  <small>hairline frame on the logo medallion</small></div><div class="sw"><div class="chip" style="background:var(--paper)"></div>
+  <b>--paper</b><code>#FBFBF7</code><code class="d">dark #0B1120</code>
+  <small>raised card on cream</small></div><div class="sw"><div class="chip" style="background:var(--line)"></div>
+  <b>--line</b><code>rgba(11, 30, 63, 0.14)</code><code class="d">dark rgba(255, 255, 255, 0.09)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--line-strong)"></div>
+  <b>--line-strong</b><code>rgba(11, 30, 63, 0.28)</code><code class="d">dark rgba(255, 255, 255, 0.20)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--tint)"></div>
+  <b>--tint</b><code>rgba(11, 30, 63, 0.05)</code><code class="d">dark rgba(255, 255, 255, 0.05)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--tint-strong)"></div>
+  <b>--tint-strong</b><code>rgba(11, 30, 63, 0.09)</code><code class="d">dark rgba(255, 255, 255, 0.09)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--glass)"></div>
+  <b>--glass</b><code>rgba(251, 251, 247, 0.72)</code><code class="d">dark rgba(14, 22, 38, 0.72)</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--plate)"></div>
+  <b>--plate</b><code>#F4F4ED</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--panel-dark)"></div>
+  <b>--panel-dark</b><code>#060C1A</code><code class="d">dark #0B1120</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--verified)"></div>
+  <b>--verified</b><code>#0866FF</code>
+  <small></small></div><div class="sw"><div class="chip" style="background:var(--plate-ink)"></div>
+  <b>--plate-ink</b><code>#0B1E3F</code>
+  <small></small></div></div>
+
+<h2>Type</h2><p class="sub">Poppins.</p>
+<div class="card type">
+<div class="eyebrow">Eyebrow label</div>
+<div style="font-size:var(--fs-display);line-height:var(--lh-tight);letter-spacing:var(--ls-display);font-weight:600">Display</div>
+<div style="font-size:var(--fs-h2);line-height:var(--lh-heading);font-weight:600">Heading two</div>
+<div style="font-size:var(--fs-h3);font-weight:600">Heading three</div>
+<div>Body text at 15px. Teaching that makes learning stick.</div></div>
+
+<h2>Buttons &amp; cards</h2>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px"><button class="btn">Primary</button><button class="btn ghost">Secondary</button></div>
+<div class="grid"><div class="card">Card · radius 24px</div><div class="card" style="background:var(--panel-dark);color:#fff">Dark panel</div><div class="card" style="background:var(--glass);backdrop-filter:blur(8px)">Glass</div></div>
+
+<h2>Shadows</h2>
+<div class="grid shadows"><div class="cell" style="box-shadow:var(--shadow-soft)">soft</div><div class="cell" style="box-shadow:var(--shadow-card)">card</div><div class="cell" style="box-shadow:var(--shadow-btn)">btn</div></div>
+
+<h2>Motion tokens</h2><p class="sub">Easing and durations.</p>
+<div class="grid">
+<div class="cell"><b>--ease-out</b><div class="ease"><b class="mv" style="animation:slide 2s var(--ease-out) infinite"></b></div></div><div class="cell"><b>--ease-spring</b><div class="ease"><b class="mv" style="animation:slide 2s var(--ease-spring) infinite"></b></div></div><div class="cell"><b>linear</b><div class="ease"><b class="mv" style="animation:slide 2s linear infinite"></b></div></div>
+<div class="cell"><b>durations</b><code>fast 180ms · med 320ms · slow 600ms</code></div></div>
+
+<h2>Animation samples</h2><p class="sub">Simplified replicas of the site's keyframes. Press Replay to restart.</p>
+<div class="grid">
+<div class="cell"><div class="stage"><div class="a" data-anim="marquee 6s linear infinite" style="animation:marquee 6s linear infinite"><div class="track"><span>Canva</span><span>Classroom</span><span>Zoom</span><span>Docs</span><span>Canva</span><span>Classroom</span><span>Zoom</span><span>Docs</span></div></div></div><b>Tools marquee loop</b><code>@keyframes marquee</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="float 3.2s ease-in-out infinite" style="animation:float 3.2s ease-in-out infinite"><div class="badge"></div></div></div><b>Badge float</b><code>@keyframes hero-badge-float</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="rise 600ms var(--ease-out) both" style="animation:rise 600ms var(--ease-out) both"><div class="card">Page</div></div></div><b>Page arrival</b><code>@keyframes route-rise</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="pop 500ms var(--ease-spring) both" style="animation:pop 500ms var(--ease-spring) both"><div class="dot"></div></div></div><b>Pop in (spring)</b><code>@keyframes cgrid-pop</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="shake 500ms both" style="animation:shake 500ms both"><div class="card">Error</div></div></div><b>Form error shake</b><code>@keyframes cgrid-shake</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="" style=""><div class="bar shim"></div></div></div><b>Loading shimmer</b><code>@keyframes ppanel-shimmer</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="" style=""><div class="dot pulse"></div></div></div><b>Status pulse</b><code>@keyframes nameplate-pulse</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="word 900ms var(--ease-out) both" style="animation:word 900ms var(--ease-out) both"><div class="word">Welcome</div></div></div><b>Intro word</b><code>@keyframes intro-word</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="" style=""><div class="dot flash"></div></div></div><b>Intro flash</b><code>@keyframes intro-flash</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="" style=""><svg width="80" height="40"><path d="M5 20h70" stroke="var(--orange)" stroke-width="4" stroke-linecap="round" stroke-dasharray="70" class="draw"/></svg></div></div><b>Icon stroke draw</b><code>@keyframes picon-draw</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="drift 4s linear infinite" style="animation:drift 4s linear infinite"><div class="drift"><i></i><i></i><i></i><i></i></div></div></div><b>Bento drift</b><code>@keyframes bento-drift-up</code><button class="replay" onclick="replay(this)">Replay</button></div><div class="cell"><div class="stage"><div class="a" data-anim="" style=""><button class="btn" onclick="toggleTheme()">Toggle light/dark</button></div></div><b>Theme switch</b><code>@keyframes theme-sweep</code><button class="replay" onclick="replay(this)">Replay</button></div>
+</div>
+
+<h2>Live pages</h2><p class="sub">Open the running app (intro, shader, 3D carousel and Lenis scroll can only be seen there).</p>
+<div><a class="lnk" href="/" target="_blank">/</a><a class="lnk" href="/projects" target="_blank">/projects</a><a class="lnk" href="/services" target="_blank">/services</a><a class="lnk" href="/showcase" target="_blank">/showcase</a><a class="lnk" href="/testimonials" target="_blank">/testimonials</a><a class="lnk" href="/about" target="_blank">/about</a><a class="lnk" href="/contact" target="_blank">/contact</a><a class="lnk" href="/privacy" target="_blank">/privacy</a><a class="lnk" href="/terms" target="_blank">/terms</a><a class="lnk" href="/thank-you" target="_blank">/thank-you</a><a class="lnk" href="/nope" target="_blank">/nope</a></div>
+<h2>Funnels</h2><div><a class="lnk" href="/funnels/placeholder-funnel-01.html" target="_blank">placeholder-funnel-01.html</a><a class="lnk" href="/funnels/placeholder-funnel-02.html" target="_blank">placeholder-funnel-02.html</a><a class="lnk" href="/funnels/placeholder-funnel-03.html" target="_blank">placeholder-funnel-03.html</a><a class="lnk" href="/funnels/placeholder-funnel-04.html" target="_blank">placeholder-funnel-04.html</a><a class="lnk" href="/funnels/placeholder-funnel-05.html" target="_blank">placeholder-funnel-05.html</a><a class="lnk" href="/funnels/placeholder-funnel-06.html" target="_blank">placeholder-funnel-06.html</a></div>
+<h2>Websites</h2><div><a class="lnk" href="/samples/placeholder-site-01.html" target="_blank">placeholder-site-01.html</a><a class="lnk" href="/samples/placeholder-site-02.html" target="_blank">placeholder-site-02.html</a><a class="lnk" href="/samples/placeholder-site-03.html" target="_blank">placeholder-site-03.html</a><a class="lnk" href="/samples/placeholder-site-04.html" target="_blank">placeholder-site-04.html</a><a class="lnk" href="/samples/placeholder-site-05.html" target="_blank">placeholder-site-05.html</a><a class="lnk" href="/samples/placeholder-site-06.html" target="_blank">placeholder-site-06.html</a></div>
+<h2>Other</h2><div><a class="lnk" href="/placeholders/sample-plan.html" target="_blank">sample-plan.html</a></div>
+</main>
+<script>
+function toggleTheme(){var r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'}
+function replay(b){var a=b.parentElement.querySelector('.a');var els=[a].concat([].slice.call(a.querySelectorAll('*')));els.forEach(function(e){var p=e.style.animation;e.style.animation='none';e.getBoundingClientRect();e.style.animation=p})}
+function replayAll(){document.querySelectorAll('.replay').forEach(replay)}
+</script></body></html>

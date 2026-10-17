@@ -1,0 +1,1751 @@
+{
+ "meta": {
+  "title": "Beyond PPT: AI for teaching",
+  "audio": "vo.mp3",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "style": "glass",
+  "snow": {
+   "count": 34,
+   "opacity": 0.17,
+   "speed": 1
+  },
+  "sceneScroll": 70,
+  "brand": {
+   "prefix": "#",
+   "name": "HeyAJ"
+  },
+  "captions": {
+   "x": 505,
+   "y": 1175,
+   "w": 390,
+   "size": 24,
+   "maxWords": 5,
+   "maxChars": 28,
+   "pill": true,
+   "emphasis": [
+    "PPT",
+    "AI",
+    "HTML",
+    "slices",
+    "parallelogram",
+    "rectangle",
+    "radius",
+    "pi",
+    "squared",
+    "triangle",
+    "teachers",
+    "Follow"
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0,
+   "mascot": {
+    "x": 360,
+    "scale": 2.2,
+    "floor": 1650,
+    "zoom": [
+     1,
+     1.09
+    ]
+   },
+   "captions": {
+    "x": 360,
+    "y": 1195,
+    "w": 640,
+    "size": 26
+   },
+   "pose": "curious",
+   "title": {
+    "text": "Still using PPT?",
+    "x": 360,
+    "y": 170,
+    "size": 68
+   },
+   "sfx": [
+    {
+     "at": 3.6,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "slide",
+     "x": 360,
+     "y": 400,
+     "w": 480,
+     "h": 280,
+     "at": 0.2,
+     "enter": "fade",
+     "out": 3.7,
+     "title": "Slide 1"
+    }
+   ]
+  },
+  {
+   "id": "intro",
+   "start": 5.3,
+   "mascot": {
+    "x": 360,
+    "scale": 2.2,
+    "floor": 1650,
+    "zoom": [
+     1.07,
+     1
+    ]
+   },
+   "captions": {
+    "x": 360,
+    "y": 1195,
+    "w": 640,
+    "size": 26
+   },
+   "pose": "wave",
+   "sfx": [
+    {
+     "at": 5.25,
+     "name": "whoosh_soft",
+     "gain": 0.55,
+     "keep": false
+    },
+    {
+     "at": 5.5,
+     "name": "pop",
+     "gain": 0.7,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 5.3,
+     "enter": "none"
+    },
+    {
+     "type": "lower",
+     "x": 360,
+     "y": 230,
+     "at": 5.5,
+     "enter": "rise"
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "start": 8.78,
+   "mascot": {
+    "x": 150,
+    "scale": 1.15,
+    "floor": 1296
+   },
+   "pose": "think",
+   "sfx": [
+    {
+     "at": 8.72,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 9,
+     "name": "open",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 12,
+     "name": "pop",
+     "gain": 0.7,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 8.8,
+     "enter": "none"
+    },
+    {
+     "type": "prop",
+     "view": "slide",
+     "x": 360,
+     "y": 410,
+     "w": 560,
+     "h": 500,
+     "at": 9,
+     "enter": "fade",
+     "glowAt": [
+      9
+     ]
+    },
+    {
+     "type": "term",
+     "text": "Abstract na idea",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 12.9,
+     "out": 14.7,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Static slide",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 15.4,
+     "out": 16.9,
+     "enter": "pop",
+     "overlap": true
+    }
+   ]
+  },
+  {
+   "id": "prompt",
+   "start": 17.12,
+   "mascot": {
+    "x": 150,
+    "scale": 1.15,
+    "floor": 1296
+   },
+   "pose": "curious",
+   "sfx": [
+    {
+     "at": 19.8,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 17.05,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 17.3,
+     "name": "open",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 19.95,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 28.2,
+     "name": "pulse",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 28.95,
+     "name": "pulse",
+     "gain": 0.45,
+     "keep": false
+    },
+    {
+     "at": 29.75,
+     "name": "sparkle",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 28.65,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 28.77,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 28.889999999999997,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 29.009999999999998,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 29.13,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 29.25,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 29.369999999999997,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 29.49,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    },
+    {
+     "at": 29.61,
+     "name": "tick",
+     "gain": 0.2,
+     "keep": true
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 17.2,
+     "enter": "none"
+    },
+    {
+     "type": "term",
+     "text": "HTML animation",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 20.4,
+     "out": 23,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Slices slider",
+     "tone": "vi",
+     "x": 360,
+     "y": 732,
+     "at": 26.1,
+     "out": 27.8,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "chat",
+     "x": 360,
+     "y": 410,
+     "w": 560,
+     "h": 500,
+     "at": 17.3,
+     "enter": "fade",
+     "glowAt": [
+      17.3,
+      29.7
+     ],
+     "title": "Assistant",
+     "prompt": "Gumawa ng HTML animation na nagpapakita kung paano nakukuha ang area ng circle. Lagyan ng slider para sa dami ng slices.",
+     "typeAt": 20,
+     "typeEnd": 27.7,
+     "sendAt": 28,
+     "thinkAt": 28.2,
+     "codeAt": 28.6,
+     "doneAt": 29.7,
+     "bannerAt": 29.7,
+     "bannerOut": 30.1,
+     "cursor": [
+      {
+       "at": 26.4,
+       "x": 380,
+       "y": 330
+      },
+      {
+       "at": 27.95,
+       "x": 518,
+       "y": 458
+      },
+      {
+       "at": 28,
+       "x": 518,
+       "y": 458,
+       "click": true
+      }
+     ],
+     "cursorOut": 28.9,
+     "fx": [
+      {
+       "kind": "sparks",
+       "at": 28,
+       "x": 280,
+       "y": 250,
+       "color": "#cdb8ff",
+       "r": 110
+      },
+      {
+       "kind": "ring",
+       "at": 28,
+       "x": 518,
+       "y": 458,
+       "r": 44
+      },
+      {
+       "kind": "sparks",
+       "at": 29.7,
+       "x": 440,
+       "y": 70,
+       "color": "#7ff0c0",
+       "r": 90
+      }
+     ]
+    },
+    {
+     "type": "object3d",
+     "kind": "icon3d",
+     "icon": "sparkle",
+     "tone": "violet",
+     "x": 360,
+     "y": 320,
+     "size": 58,
+     "at": 20,
+     "phase": 1,
+     "front": true,
+     "out": 28.7
+    }
+   ]
+  },
+  {
+   "id": "circle",
+   "start": 30.14,
+   "mascot": {
+    "x": 150,
+    "scale": 1.15,
+    "floor": 1296
+   },
+   "pose": [
+    {
+     "at": "scene",
+     "pose": "point"
+    },
+    {
+     "at": 38.3,
+     "pose": "cheer"
+    },
+    {
+     "at": 44.8,
+     "pose": "confident"
+    }
+   ],
+   "sfx": [
+    {
+     "at": 45.3,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 39.9,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 37,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 31.7,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 30.05,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 30.2,
+     "name": "open",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 30.95,
+     "name": "click",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 31.5,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.57,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.64,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.71,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.78,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.85,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.92,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 31.99,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 32.06,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 32.13,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 32.2,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 32.27,
+     "name": "tick",
+     "gain": 0.42,
+     "keep": true
+    },
+    {
+     "at": 34.1,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 34.43,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 34.76,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 35.09,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 35.42,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 35.75,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 36.08,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 36.410000000000004,
+     "name": "pop",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 36.8,
+     "name": "sparkle",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 36.82,
+     "name": "click",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 40.32,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 40.64,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 40.82,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 40.96,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.08,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.2,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.28,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.36,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.44,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.5,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.58,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.64,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.68,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.74,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.82,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.88,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 41.96,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 42.04,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 42.12,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 42.24,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 42.36,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 42.5,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 42.68,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 43,
+     "name": "tick",
+     "gain": 0.28,
+     "keep": true
+    },
+    {
+     "at": 44.9,
+     "name": "pen_tick",
+     "gain": 0.9,
+     "keep": false
+    },
+    {
+     "at": 47.6,
+     "name": "pen_tick",
+     "gain": 0.9,
+     "keep": false
+    },
+    {
+     "at": 49.7,
+     "name": "pen_tick",
+     "gain": 0.9,
+     "keep": false
+    },
+    {
+     "at": 50.4,
+     "name": "pop",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 50.55,
+     "name": "sparkle",
+     "gain": 0.7,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 30.2,
+     "enter": "none"
+    },
+    {
+     "type": "prop",
+     "view": "circle",
+     "x": 360,
+     "y": 410,
+     "w": 560,
+     "h": 500,
+     "at": 30.2,
+     "enter": "fade",
+     "glowAt": [
+      30.2,
+      36.8
+     ],
+     "pulses": [
+      {
+       "target": "play",
+       "at": 30.9
+      },
+      {
+       "target": "thumb",
+       "at": 39.6
+      }
+     ],
+     "scroll": [
+      {
+       "at": 30.2,
+       "y": 170
+      },
+      {
+       "at": 31.3,
+       "y": 0
+      },
+      {
+       "at": 52.2,
+       "y": 0
+      },
+      {
+       "at": 53.2,
+       "y": 70
+      },
+      {
+       "at": 54.8,
+       "y": 70
+      },
+      {
+       "at": 55.8,
+       "y": 0
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparks",
+       "anchor": "shape",
+       "at": 36.8,
+       "color": "#ffd479",
+       "r": 110
+      },
+      {
+       "kind": "ring",
+       "anchor": "base",
+       "at": 44.9,
+       "color": "#0e7490",
+       "r": 44
+      },
+      {
+       "kind": "ring",
+       "anchor": "height",
+       "at": 47.6,
+       "color": "#6d28d9",
+       "r": 38
+      },
+      {
+       "kind": "ring",
+       "anchor": "area",
+       "at": 49.7,
+       "color": "#c2410c",
+       "r": 64
+      }
+     ],
+     "cutAt": 31.5,
+     "rearrangeAt": 34.1,
+     "rearrangeDur": 2.6,
+     "slices": [
+      {
+       "at": 30,
+       "n": 16
+      },
+      {
+       "at": 39.6,
+       "n": 16
+      },
+      {
+       "at": 43.7,
+       "n": 64
+      }
+     ],
+     "baseAt": 44.9,
+     "heightAt": 47.6,
+     "areaAt": 49.7
+    },
+    {
+     "type": "stepbar",
+     "x": 330,
+     "y": 106,
+     "at": 30.5,
+     "enter": "fade",
+     "items": [
+      {
+       "text": "Slice",
+       "at": 31.5
+      },
+      {
+       "text": "Rearrange",
+       "at": 34.1
+      },
+      {
+       "text": "Formula",
+       "at": 44.9
+      }
+     ]
+    },
+    {
+     "type": "term",
+     "text": "Slices",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 31.6,
+     "out": 33.9,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Parallelogram",
+     "tone": "vi",
+     "x": 360,
+     "y": 732,
+     "at": 36.6,
+     "out": 38,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Slider",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 38.9,
+     "out": 40.3,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Rectangle",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 43.6,
+     "out": 44.7,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Base = ½ circumference",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 44.9,
+     "out": 47.4,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Height = radius",
+     "tone": "vi",
+     "x": 360,
+     "y": 732,
+     "at": 47.6,
+     "out": 49.5,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Area = π × r × r",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 49.7,
+     "out": 53.4,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "object3d",
+     "kind": "coin",
+     "text": "π",
+     "tone": "violet",
+     "x": 104,
+     "y": 188,
+     "size": 36,
+     "at": 50.4,
+     "front": true,
+     "out": 56
+    }
+   ]
+  },
+  {
+   "id": "doubling",
+   "start": 56.3,
+   "mascot": {
+    "x": 150,
+    "scale": 1.15,
+    "floor": 1296
+   },
+   "pose": [
+    {
+     "at": "scene",
+     "pose": "think"
+    },
+    {
+     "at": 62.5,
+     "pose": "shocked"
+    }
+   ],
+   "sfx": [
+    {
+     "at": 60.3,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 56.22,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 56.4,
+     "name": "open",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 56.65,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 60.1,
+     "name": "pop",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 62.4,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 63.9,
+     "name": "thud",
+     "gain": 1,
+     "keep": false
+    },
+    {
+     "at": 63.95,
+     "name": "sparkle",
+     "gain": 0.7,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 56.35,
+     "enter": "none"
+    },
+    {
+     "type": "prop",
+     "view": "radius",
+     "x": 360,
+     "y": 410,
+     "w": 560,
+     "h": 500,
+     "at": 56.4,
+     "enter": "fade",
+     "glowAt": [
+      56.4,
+      63.9
+     ],
+     "fx": [
+      {
+       "kind": "sparks",
+       "anchor": "circle",
+       "at": 63.9,
+       "color": "#ffd479",
+       "r": 110
+      }
+     ],
+     "scroll": [
+      {
+       "at": 56.4,
+       "y": 140
+      },
+      {
+       "at": 57.3,
+       "y": 0
+      }
+     ],
+     "radius": [
+      {
+       "at": 56,
+       "v": 1
+      },
+      {
+       "at": 62.4,
+       "v": 1
+      },
+      {
+       "at": 63.9,
+       "v": 2
+      }
+     ],
+     "questionAt": 60.1,
+     "questionOut": 62.4
+    },
+    {
+     "type": "term",
+     "text": "Radius × 2",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 58.2,
+     "out": 60,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Area × 4",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 62.5,
+     "out": 64.2,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Radius squared",
+     "tone": "vi",
+     "x": 360,
+     "y": 732,
+     "at": 64.3,
+     "out": 66,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "object3d",
+     "kind": "coin",
+     "text": "x4",
+     "tone": "orange",
+     "x": 622,
+     "y": 188,
+     "size": 44,
+     "at": 63.6,
+     "front": true
+    },
+    {
+     "type": "object3d",
+     "kind": "shock",
+     "tone": "orange",
+     "x": 358,
+     "y": 350,
+     "size": 190,
+     "at": 63.9,
+     "front": true,
+     "out": 64.9,
+     "dur": 0.9
+    }
+   ]
+  },
+  {
+   "id": "triangle",
+   "start": 66.1,
+   "mascot": {
+    "x": 150,
+    "scale": 1.15,
+    "floor": 1296
+   },
+   "pose": [
+    {
+     "at": "scene",
+     "pose": "curious"
+    },
+    {
+     "at": 74,
+     "pose": "cheer"
+    },
+    {
+     "at": 78.4,
+     "pose": "calm"
+    }
+   ],
+   "sfx": [
+    {
+     "at": 81.8,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 81.9,
+     "name": "click",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 77.8,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 70.4,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 67.1,
+     "name": "whoosh_soft",
+     "gain": 0.32,
+     "keep": false
+    },
+    {
+     "at": 66.02,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 66.2,
+     "name": "open",
+     "gain": 0.8,
+     "keep": false
+    },
+    {
+     "at": 66.9,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 68.9,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 70.3,
+     "name": "whoosh_soft",
+     "gain": 0.55,
+     "keep": false
+    },
+    {
+     "at": 74.1,
+     "name": "click",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 74.12,
+     "name": "sparkle",
+     "gain": 0.9,
+     "keep": false
+    },
+    {
+     "at": 77.4,
+     "name": "pen_tick",
+     "gain": 0.9,
+     "keep": false
+    },
+    {
+     "at": 82.4,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 83.4,
+     "name": "sparkle",
+     "gain": 0.7,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 66.15,
+     "enter": "none"
+    },
+    {
+     "type": "prop",
+     "view": "triangle",
+     "x": 360,
+     "y": 410,
+     "w": 560,
+     "h": 500,
+     "at": 66.2,
+     "enter": "fade",
+     "fx": [
+      {
+       "kind": "sparks",
+       "anchor": "shape",
+       "at": 74.1,
+       "color": "#cdb8ff",
+       "r": 110
+      },
+      {
+       "kind": "sparks",
+       "anchor": "shape",
+       "at": 83.4,
+       "color": "#cdb8ff",
+       "r": 90
+      }
+     ],
+     "scroll": [
+      {
+       "at": 66.2,
+       "y": 140
+      },
+      {
+       "at": 67,
+       "y": 0
+      }
+     ],
+     "glowAt": [
+      66.2,
+      74.1
+     ],
+     "cursor": [
+      {
+       "at": 80.6,
+       "x": 330,
+       "y": 380
+      },
+      {
+       "at": 81.85,
+       "x": 470,
+       "y": 467
+      },
+      {
+       "at": 81.9,
+       "x": 470,
+       "y": 467,
+       "click": true
+      }
+     ],
+     "cursorOut": 83,
+     "pulses": [
+      {
+       "target": "new",
+       "at": 81.2
+      }
+     ],
+     "runs": [
+      {
+       "shape": "acute",
+       "at": 66.9,
+       "copyAt": 68.9,
+       "rotAt": 70.3,
+       "rotDur": 3.6,
+       "paraAt": 74.1,
+       "labelAt": 77.4
+      },
+      {
+       "shape": "obtuse",
+       "at": 81.9,
+       "copyAt": 82.3,
+       "rotAt": 82.4,
+       "rotDur": 1,
+       "paraAt": 83.4,
+       "labelAt": 82.1
+      }
+     ]
+    },
+    {
+     "type": "stepbar",
+     "x": 330,
+     "y": 106,
+     "at": 66.4,
+     "enter": "fade",
+     "items": [
+      {
+       "text": "Copy",
+       "at": 68.9
+      },
+      {
+       "text": "Rotate",
+       "at": 70.3
+      },
+      {
+       "text": "Parallelogram",
+       "at": 74.1
+      }
+     ]
+    },
+    {
+     "type": "term",
+     "text": "Triangle",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 67.5,
+     "out": 68.7,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Rotate 180°",
+     "tone": "vi",
+     "x": 360,
+     "y": 732,
+     "at": 70.2,
+     "out": 73.6,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Parallelogram",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 74.1,
+     "out": 75.2,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "½ × base × height",
+     "tone": "or",
+     "x": 360,
+     "y": 732,
+     "at": 77.6,
+     "out": 81,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Any triangle",
+     "tone": "cy",
+     "x": 360,
+     "y": 732,
+     "at": 82.2,
+     "out": 83.6,
+     "enter": "pop",
+     "overlap": true
+    }
+   ]
+  },
+  {
+   "id": "teacher",
+   "start": 83.8,
+   "mascot": {
+    "x": 360,
+    "scale": 2.2,
+    "floor": 1650,
+    "zoom": [
+     1,
+     1.07
+    ]
+   },
+   "captions": {
+    "x": 360,
+    "y": 1195,
+    "w": 640,
+    "size": 26
+   },
+   "pose": "confident",
+   "sfx": [
+    {
+     "at": 83.72,
+     "name": "whoosh_soft",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 85,
+     "name": "success",
+     "gain": 0.9,
+     "keep": false
+    },
+    {
+     "at": 85.05,
+     "name": "sparkle",
+     "gain": 0.5,
+     "keep": false
+    },
+    {
+     "at": 88.3,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 83.85,
+     "enter": "none"
+    },
+    {
+     "type": "object3d",
+     "kind": "icon3d",
+     "icon": "check",
+     "tone": "green",
+     "x": 360,
+     "y": 335,
+     "size": 70,
+     "at": 85,
+     "phase": 1
+    },
+    {
+     "type": "sparks",
+     "x": 360,
+     "y": 335,
+     "at": 85,
+     "color": "#7ff0c0",
+     "enter": "none",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Teacher checks the math",
+     "tone": "vi",
+     "x": 360,
+     "y": 480,
+     "at": 84.5,
+     "out": 86.4,
+     "enter": "pop",
+     "overlap": true
+    },
+    {
+     "type": "term",
+     "text": "Ano sa tingin ninyo?",
+     "tone": "cy",
+     "x": 360,
+     "y": 480,
+     "at": 88.4,
+     "out": 90.6,
+     "enter": "pop",
+     "overlap": true
+    }
+   ]
+  },
+  {
+   "id": "resolution",
+   "start": 90.96,
+   "mascot": {
+    "x": 360,
+    "scale": 2.2,
+    "floor": 1650,
+    "zoom": [
+     1,
+     1.06
+    ]
+   },
+   "captions": {
+    "hide": true
+   },
+   "pose": "calm",
+   "sfx": [
+    {
+     "at": 90.88,
+     "name": "whoosh_soft",
+     "gain": 0.45,
+     "keep": false
+    },
+    {
+     "at": 91,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    },
+    {
+     "at": 93.6,
+     "name": "pop",
+     "gain": 0.6,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 91,
+     "enter": "none"
+    },
+    {
+     "type": "note",
+     "big": true,
+     "x": 360,
+     "y": 390,
+     "w": 600,
+     "at": 91,
+     "enter": "fade",
+     "lines": [
+      {
+       "text": "AI will not replace teachers.",
+       "at": 91
+      },
+      {
+       "text": "Teachers are needed more than ever.",
+       "at": 93.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "start": 96.7,
+   "mascot": {
+    "x": 360,
+    "scale": 2.2,
+    "floor": 1650,
+    "zoom": [
+     1.06,
+     1
+    ]
+   },
+   "captions": {
+    "x": 360,
+    "y": 1195,
+    "w": 640,
+    "size": 26
+   },
+   "pose": [
+    {
+     "at": "scene",
+     "pose": "wave"
+    },
+    {
+     "at": 100.2,
+     "pose": "double-thumbs"
+    }
+   ],
+   "sfx": [
+    {
+     "at": 96.6,
+     "name": "whoosh",
+     "gain": 0.55,
+     "keep": false
+    },
+    {
+     "at": 96.8,
+     "name": "pop",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 100.2,
+     "name": "click",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 100.25,
+     "name": "pop",
+     "gain": 0.7,
+     "keep": false
+    },
+    {
+     "at": 100.3,
+     "name": "sparkle",
+     "gain": 0.9,
+     "keep": false
+    }
+   ],
+   "elements": [
+    {
+     "type": "wipe",
+     "x": 360,
+     "y": 126,
+     "at": 96.7,
+     "enter": "none"
+    },
+    {
+     "type": "lower",
+     "x": 360,
+     "y": 230,
+     "at": 96.8,
+     "enter": "rise"
+    },
+    {
+     "type": "follow",
+     "x": 360,
+     "y": 390,
+     "at": 100.2,
+     "enter": "pop"
+    },
+    {
+     "type": "sparks",
+     "x": 360,
+     "y": 390,
+     "at": 100.2,
+     "color": "#ffd479",
+     "enter": "none",
+     "overlap": true,
+     "r": 150
+    }
+   ]
+  }
+ ]
+}
