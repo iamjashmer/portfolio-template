@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "title": "Cover: Beyond PPT",
+  "audio": "../vo.mp3",
+  "words": "../words.json",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "style": "glass",
+  "captions": false,
+  "sound": false,
+  "snow": {
+   "count": 34,
+   "opacity": 0.17,
+   "speed": 1
+  },
+  "brand": {
+   "prefix": "#",
+   "name": "HeyAJ"
+  }
+ },
+ "scenes": [
+  {
+   "id": "cover",
+   "start": 0,
+   "end": 6,
+   "mascot": {
+    "x": 360,
+    "scale": 1.6,
+    "floor": 1530
+   },
+   "pose": "curious",
+   "title": {
+    "text": "Still using\n{{PPT?}}",
+    "x": 360,
+    "y": 185,
+    "size": 98
+   },
+   "elements": [
+    {
+     "type": "term",
+     "text": "Beyond PPT: AI for teaching",
+     "tone": "cy",
+     "x": 360,
+     "y": 350,
+     "at": 0,
+     "enter": "none",
+     "size": 28
+    },
+    {
+     "type": "prop",
+     "view": "circle",
+     "x": 360,
+     "y": 650,
+     "w": 480,
+     "h": 400,
+     "at": 0,
+     "enter": "none",
+     "tilt": {
+      "y": -20,
+      "x": 8,
+      "sy": 0,
+      "sx": 0
+     },
+     "glowAt": [
+      3.9
+     ],
+     "cutAt": 0.2,
+     "rearrangeAt": 0.5,
+     "rearrangeDur": 1.2,
+     "slices": [
+      {
+       "at": 0,
+       "n": 24
+      }
+     ],
+     "baseAt": 2,
+     "heightAt": 2.2,
+     "areaAt": 2.4
+    },
+    {
+     "type": "object3d",
+     "kind": "coin",
+     "text": "\u03c0",
+     "tone": "violet",
+     "x": 150,
+     "y": 470,
+     "size": 42,
+     "at": 0.2,
+     "front": true
+    }
+   ]
+  }
+ ]
+}
